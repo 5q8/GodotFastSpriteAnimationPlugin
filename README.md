@@ -2,6 +2,8 @@
 
 A Godot editor tool that streamlines the creation of frame-based animations from sprite sheets.
 
+<img width="455" height="409" alt="image" src="https://github.com/user-attachments/assets/ee88f49c-8f13-428f-8737-6b146ca85f5e" />
+
 ## Features
 
 - **Quick Animation Creation**: Generate animations directly from sprite sheet rows
@@ -24,6 +26,8 @@ A Godot editor tool that streamlines the creation of frame-based animations from
 
 ## Requirements
 
-- Godot 4.x
+- Godot 4.6
 - A Sprite2D with `hframes` and `vframes` properly configured (important)
 - An AnimationPlayer node to receive the animation
+
+
