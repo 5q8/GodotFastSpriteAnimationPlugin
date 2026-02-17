@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cvqsntgjog0lf"]
+
+[ext_resource type="Script" uid="uid://bpu656tx0wtc2" path="res://addons/FastSpriteAnimation/interface_panel.gd" id="1_gq35t"]
+
+[node name="Fast Sprite Animation" type="Control" unique_id=633551133]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gq35t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1335111310]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=713262232]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1190704974]
+layout_mode = 2
+text = "AnimationPlayer Node:"
+
+[node name="AnimationPlayerSelector" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1096564041]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Select AnimationPlayer Node"
+
+[node name="Sprite2D" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=912157457]
+layout_mode = 2
+text = "Sprite2D Node:"
+
+[node name="Sprite2DSelector" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=395732547]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Select Sprite2D Node"
+
+[node name="FrameSizeX" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=981686275]
+layout_mode = 2
+text = "Frame width: -"
+horizontal_alignment = 1
+
+[node name="FrameSizeY" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=652317000]
+layout_mode = 2
+text = "Frame height: -"
+horizontal_alignment = 1
+
+[node name="SpriteSheetPreview" type="TextureRect" parent="HBoxContainer" unique_id=1016265681]
+layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/AnimationPlayerSelector" to="." method="_on_animation_player_selector_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Sprite2DSelector" to="." method="_on_sprite_2d_selector_pressed"]
