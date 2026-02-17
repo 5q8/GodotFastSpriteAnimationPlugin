@@ -2,6 +2,8 @@
 
 A Godot editor tool that streamlines the creation of frame-based animations from sprite sheets.
 
+You can also download it from the official Godot [Asset Library Page](https://godotengine.org/asset-library/asset/4790)
+
 <img width="455" height="409" alt="image" src="https://github.com/user-attachments/assets/ee88f49c-8f13-428f-8737-6b146ca85f5e" />
 
 ## Features
