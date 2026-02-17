@@ -83,6 +83,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Add animation"
 
+[node name="ClearButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1162033306]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Clear selections"
+
 [node name="InfoLabel" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=101847690]
 layout_mode = 2
 
@@ -94,3 +100,4 @@ size_flags_vertical = 4
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/AnimationPlayerSelector" to="." method="_on_animation_player_selector_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Sprite2DSelector" to="." method="_on_sprite_2d_selector_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/AddAnimation" to="." method="_on_add_animation_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/ClearButton" to="." method="_on_clear_button_pressed"]

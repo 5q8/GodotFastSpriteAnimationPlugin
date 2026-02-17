@@ -10,6 +10,7 @@ extends Control
 @onready var select_row_spinbox : SpinBox = $HBoxContainer/VBoxContainer/SelectRowHBox/SpinBox
 @onready var animation_name_text_edit : TextEdit = $HBoxContainer/VBoxContainer/AnimationName
 @onready var add_animation_button : Button = $HBoxContainer/VBoxContainer/AddAnimation
+@onready var info_label : Label = $HBoxContainer/VBoxContainer/InfoLabel
 var editor_interface : EditorInterface
 
 var assigned_sprite : Sprite2D
@@ -117,3 +118,21 @@ func _on_add_animation_pressed() -> void:
 	library.add_animation(animation_name, animation)
 
 	print("Animation created:", animation_name)
+
+
+func _on_clear_button_pressed() -> void:
+	sprite2d_selector_button.text = "Select Sprite2D Node"
+	animation_player_selector_button.text = "Select AnimationPlayer Node"
+	animation_player_selector_button.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	sprite2d_selector_button.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	assigned_sprite = null
+	assigned_animation_player = null
+	texture = null
+	sprite_sheet_preview.texture = null
+	assigned_sprite_path = ""
+	h_frames = 0
+	v_frames = 0
+	frame_width = 0
+	frame_height = 0
+	frame_size_x_label.text = "Frame width: "
+	frame_size_y_label.text = "Frame height: "
