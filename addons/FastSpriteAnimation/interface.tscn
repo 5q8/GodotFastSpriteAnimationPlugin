@@ -44,6 +44,11 @@ layout_mode = 2
 text = "Frame height: -"
 horizontal_alignment = 1
 
+[node name="LoopCheckBox" type="CheckBox" parent="HBoxContainer/VBoxContainer" unique_id=438757124]
+layout_mode = 2
+text = "Loop
+"
+
 [node name="FrameDurationHBox" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=217412647]
 layout_mode = 2
 alignment = 1
@@ -58,19 +63,6 @@ custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 step = 0.01
-alignment = 1
-
-[node name="SelectRowHBox" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=868899127]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/SelectRowHBox" unique_id=730500789]
-layout_mode = 2
-text = "Select Row: "
-
-[node name="SpinBox" type="SpinBox" parent="HBoxContainer/VBoxContainer/SelectRowHBox" unique_id=726799407]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
 alignment = 1
 
 [node name="AnimationName" type="TextEdit" parent="HBoxContainer/VBoxContainer" unique_id=1836218335]
@@ -92,10 +84,22 @@ text = "Clear selections"
 [node name="InfoLabel" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=101847690]
 layout_mode = 2
 
+[node name="ClearFramesButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=183408842]
+layout_mode = 2
+text = "Clear Frames"
+
 [node name="SpriteSheetPreview" type="TextureRect" parent="HBoxContainer" unique_id=1016265681]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="FrameGridOverlay" type="Control" parent="HBoxContainer/SpriteSheetPreview" unique_id=1240772338]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/AnimationPlayerSelector" to="." method="_on_animation_player_selector_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Sprite2DSelector" to="." method="_on_sprite_2d_selector_pressed"]
